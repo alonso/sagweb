@@ -1,0 +1,1221 @@
+MAP
+  #
+  # Start of map file
+  #
+  # Sample map file for a chameleon app.
+  #
+  NAME "REGION_DEL_BIOBIO"
+  STATUS ON
+  EXTENT 552477.899994 5730978.200007 922535.939977 6021219.799993 
+  SIZE 768 500 
+  SHAPEPATH "./data"
+  SYMBOLSET "./etc/publico.sym"
+  FONTSET "./etc/fonts.txt"
+  IMAGETYPE JPEG
+  IMAGECOLOR 255 255 255
+  UNITS METERS
+  #
+  # Start of web interface definition
+  #
+  WEB
+    #MINSCALE 5500000
+    MAXSCALE 4500000
+    #
+    # On Windows systems, /tmp and /tmp/ms_tmp/ should be created at the root 
+    # of the drive where the .MAP file resides.
+    #
+    IMAGEPATH "/ms4w/tmp/ms_tmp/"
+    IMAGEURL "/ms_tmp/"
+    METADATA
+    END
+  END
+  #
+  # Start of reference map
+  #
+  REFERENCE
+    STATUS ON
+    IMAGE cuadro_ubicacion.jpg
+    SIZE 120 82 
+    EXTENT -5700.02715 5721887.729775 430056.716245 6018074.464893
+    COLOR -1 -1 -1
+    OUTLINECOLOR 255 0 0
+  END
+  QUERYMAP
+    COLOR 255 0 0
+    STYLE HILITE
+  END
+  PROJECTION
+    "init=epsg:32718" 
+  END
+  #
+  # Start of legend
+  #
+  LEGEND
+    STATUS ON
+    KEYSIZE 18 12 
+    LABEL
+      TYPE BITMAP
+      SIZE MEDIUM
+      COLOR 0 0 89
+    END
+  END
+  #
+  # Start of scalebar
+  #
+  SCALEBAR
+    STATUS ON
+    COLOR 255 255 255
+    OUTLINECOLOR 0 0 0
+    BACKGROUNDCOLOR 0 0 0
+    IMAGECOLOR 255 255 255
+    UNITS kilometers
+    INTERVALS 5
+    SIZE 150 5 
+    LABEL
+      SIZE SMALL
+      COLOR 0 0 0
+    END
+  END
+  #LAYER
+  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #
+  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #
+  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #
+  OUTPUTFORMAT
+    NAME "png24"
+    MIMETYPE "image/png"
+    DRIVER "GD/PNG"
+    EXTENSION "png"
+    IMAGEMODE RGBA
+    TRANSPARENT on
+  END
+  #
+  # Start of layer definitions
+  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #
+  LAYER
+    NAME "Sudamerica"
+    STATUS on
+    DATA sudamerica.shp
+    TYPE polygon
+    CLASSITEM "TERRITORIO"
+    UNITS DD
+    SIZEUNITS PIXELS
+    TOLERANCE 3
+    TOLERANCEUNITS pixels
+    TRANSFORM true
+    #Sudamerica
+    TRANSPARENCY 100
+    METADATA
+    END
+    #METADATA
+    PROJECTION
+      "init=epsg:4326" 
+    END
+    CLASS
+      NAME "Chile"
+      EXPRESSION "Chile"
+      #RASTERFILL_STYLE_SOLID
+      STYLE
+        COLOR 255 251 195
+        BACKGROUNDCOLOR 255 255 255
+      END
+    #STYLE
+    END
+    #CLASS
+    CLASS
+      NAME "Mar"
+      EXPRESSION "Mar"
+      #RASTERFILL_STYLE_SOLID
+      STYLE
+        COLOR 195 252 255
+        BACKGROUNDCOLOR 255 255 255
+      END
+    #STYLE
+    END
+    #CLASS
+    CLASS
+      NAME "Sudmerica"
+      EXPRESSION "Sudmerica"
+      #RASTERFILL_STYLE_SOLID
+      STYLE
+        COLOR 243 226 211
+        BACKGROUNDCOLOR 255 255 255
+      END
+    #STYLE
+    END
+  #CLASS
+  END
+  #LAYER
+  #############################################
+################################################################
+  #####################################################
+LAYER
+  NAME Nombres_Regionales
+  METADATA
+    "DESCRIPTION"   "regional"
+    "RESULT_FIELDS" "NAME"
+    "GROUP" "Point"
+    "LAYER" "sudamerica"
+  END
+  TYPE polygon
+  STATUS ON
+  DATA sudamerica
+  LabelItem "NOM_REG"  
+  CLASS
+    LABEL
+      COLOR  100 100 100
+      FONT sans-italic
+      TYPE truetype
+      SIZE 11
+      POSITION AUTO     
+      PARTIALS FALSE
+      OUTLINECOLOR 255 255 255      
+    END 
+  END
+  TOLERANCE 5
+  PROJECTION
+    "init=epsg:4326"
+END
+END # Layer
+######################################################
+#####################################################
+LAYER
+  NAME Nombre_Comunas
+  METADATA
+    "DESCRIPTION"   "COMUNAS"
+    "RESULT_FIELDS" "NAME"
+    "GROUP" "Point"
+    "LAYER" "COMUNAS"
+  END
+  TYPE polygon
+  STATUS on
+  DATA 'carta_base/50000/co8'
+  LabelItem "Nom_com"  
+  CLASS
+    LABEL
+      COLOR  0 0 0
+      FONT sans-italic
+      TYPE truetype
+      SIZE 7
+      POSITION AUTO     
+      PARTIALS FALSE
+      OUTLINECOLOR 255 255 255      
+    END 
+  END
+  TOLERANCE 5
+PROJECTION
+    "init=epsg:32718"
+END
+END # Layer
+#####################################################
+######################################################
+  LAYER  #Nombre_Poblados
+    TRANSPARENCY 100
+    NAME 'Nombre_Poblados'
+    METADATA
+    END  #METADATA
+    TOLERANCE 3
+    TOLERANCEUNITS pixels
+    DATA 'carta_base/50000/cp508'
+    HEADER 'header.html'
+    FOOTER 'footer.html'
+    LABELCACHE on
+#    TILEINDEX ''
+#    TILEITEM  ''
+    STATUS on
+    DEBUG false
+    TRANSFORM true
+    TYPE point
+	LABELITEM 'NOMBRE'
+    CLASS
+      TEMPLATE 'template.html'
+        SYMBOL 'circle'
+        SIZE 10
+        COLOR -1 -1 -1
+    LABEL
+     COLOR  0 0 0
+     FONT sans-italic
+     TYPE truetype
+     SIZE 6
+     POSITION UC    
+     PARTIALS FALSE
+     
+    END 
+    END #CLASS
+  END  #LAYER
+######################################################
+######################################################
+  LAYER  #Nombre_Ciudades
+    TRANSPARENCY 100
+    NAME 'Nombre_Ciudades'
+    METADATA
+    END  #METADATA
+    TOLERANCE 3
+    TOLERANCEUNITS pixels
+    DATA 'carta_base/250000/cu2508'
+    HEADER 'header.html'
+    FOOTER 'footer.html'
+    LABELCACHE on
+#    TILEINDEX ''
+#    TILEITEM  ''
+    STATUS on
+    DEBUG false
+    TRANSFORM true
+    TYPE polygon
+	LABELITEM 'nombre'
+    CLASS
+      TEMPLATE 'template.html'
+        SYMBOL 'circle'
+        SIZE 10
+        COLOR -1 -1 -1
+    LABEL
+     COLOR  0 0 0
+     FONT sans-italic
+     TYPE truetype
+     SIZE 6
+     POSITION UC    
+     PARTIALS FALSE
+     
+    END 
+    END #CLASS
+  END  #LAYER
+######################################################
+####################################################
+#################################################
+  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #
+  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #
+ 
+  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #
+  LAYER
+    NAME "C_Agua250_8"
+    #    TILEINDEX ''
+    #    TILEITEM  ''
+    STATUS off
+    DATA "carta_base/250000/ca2508"
+    TYPE polygon
+    CLASSITEM "TIPO"
+    LABELCACHE on
+    #METADATA
+    TOLERANCE 3
+    TOLERANCEUNITS pixels
+    TRANSFORM true
+    #C_Agua250_8
+    TRANSPARENCY 100
+    HEADER "header.html"
+    FOOTER "footer.html"
+    TEMPLATE "t.html"
+    DEBUG false
+    METADATA
+      "SPATIALSEARCH"    ""
+      "wms_abstract"    "Cuerpos de Agua, cartografía 1:250.000 IGM"
+      "wms_srs"    "epsg:32718"
+      "wfs_srs"    "epsg:32718"
+      "wms_queriable"    "1"
+      "wfs_queriable"    "1"
+      "wms_name"    "C_Agua250_8"
+      "wfs_name"    "C_Agua250_8"
+      "gml_include_items"    "all"
+      "wms_sld_body"    ""
+      "gml_geometries"    "geometry"
+      "gml_geometry_type"    "polygon"
+    END
+    PROJECTION
+      "init=epsg:32718" 
+    END
+    CLASS
+      NAME "Embalse"
+      EXPRESSION "Embalse"
+      TEMPLATE "template.html"
+      #RASTERFILL_STYLE_SOLID
+      STYLE
+        COLOR 0 255 255
+        BACKGROUNDCOLOR 255 255 255
+      END
+    #STYLE
+    END
+    #CLASS
+    CLASS
+      NAME "Lago/laguna"
+      EXPRESSION "Lago/laguna"
+      TEMPLATE "template.html"
+      #RASTERFILL_STYLE_SOLID
+      STYLE
+        COLOR 0 0 255
+        BACKGROUNDCOLOR 255 255 255
+      END
+    #STYLE
+    END
+  #CLASS
+  END
+  #LAYER
+  ####################################################
+  LAYER  #Caminos250_8
+    TRANSPARENCY 100
+    NAME 'Caminos250_8'
+PROJECTION
+    "init=epsg:32718"
+END
+    METADATA
+      "SPATIALSEARCH"        ""
+      "wms_abstract"         "Caminos, cartografía 1:250.000 IGM"
+      "wms_srs"              "epsg:32718"
+     # "wms_metadataurl_href"  "http://www.snit.gob.cl/catalogo/showMetadata.do?metadataId=9561&metadataStatus=2&private=false"
+      "wfs_srs"              "epsg:32718"
+      "wms_queriable"        "1"
+      "wfs_queriable"        "1"
+      "wms_name"             "Caminos250_8"
+      "wfs_name"             "Caminos250_8"
+      "gml_include_items"    "all"
+      "wms_sld_body"         ""
+      "gml_geometries"       "geometry"
+      "gml_geometry_type"    "LINE"
+    END  #METADATA
+    TOLERANCE 3
+    TOLERANCEUNITS pixels
+    DATA 'carta_base/250000/cam2508'
+    HEADER 'header.html'
+    FOOTER 'footer.html'
+    TEMPLATE 't.html'
+    LABELCACHE on
+#    TILEINDEX ''
+#    TILEITEM  ''
+    STATUS oN
+    DEBUG false
+    TRANSFORM true
+    TYPE line
+    CLASSITEM 'TIPO'
+    CLASS
+      NAME 'PRIMERA CLASE PAVIMENTADO DOS VIAS'
+      TEMPLATE 'template.html'
+      EXPRESSION 'PRIMERA CLASE PAVIMENTADO DOS VIAS'
+      #PEN
+      STYLE
+
+        COLOR 255 0 0
+      END  #STYLE
+    END #CLASS
+    CLASS
+      NAME 'PRIMERA CLASE PAVIMENTADO UNA VIA'
+      TEMPLATE 'template.html'
+      EXPRESSION 'PRIMERA CLASE PAVIMENTADO UNA VIA'
+      #PEN
+      STYLE
+
+        COLOR 255 0 0
+      END  #STYLE
+    END #CLASS
+    CLASS
+      NAME 'SEGUNDA CLASE TIERRA DOS VIAS'
+      TEMPLATE 'template.html'
+      EXPRESSION 'SEGUNDA CLASE TIERRA DOS VIAS'
+      #PEN
+      STYLE
+
+        COLOR 161 102 50
+      END  #STYLE
+    END #CLASS
+    CLASS
+      NAME 'SEGUNDA CLASE TRANSITABLE TIEMPO SECO'
+      TEMPLATE 'template.html'
+      EXPRESSION 'SEGUNDA CLASE TRANSITABLE TIEMPO SECO'
+      #PEN
+      STYLE
+
+        COLOR 161 102 50
+      END  #STYLE
+    END #CLASS
+    CLASS
+      NAME 'HUELLA'
+      TEMPLATE 'template.html'
+      EXPRESSION 'HUELLA'
+      #PEN
+      STYLE
+
+        COLOR 187 166 0
+      END  #STYLE
+    END #CLASS
+
+    CLASS
+      NAME 'SENDERO'
+      TEMPLATE 'template.html'
+      EXPRESSION 'SENDERO'
+      #PEN
+      STYLE
+
+        COLOR 120 120 120
+      END  #STYLE
+    END #CLASS
+  END  #LAYER
+###############################################################################################################
+  LAYER
+    NAME "Curvas250_8"
+    #    TILEINDEX ''
+    #    TILEITEM  ''
+    STATUS on
+    DATA "carta_base/250000/cur2508"
+    TYPE line
+    LABELCACHE on
+    #METADATA
+    TOLERANCE 3
+    TOLERANCEUNITS pixels
+    TRANSFORM true
+    #Curvas250_8
+    TRANSPARENCY 100
+    HEADER "header.html"
+    FOOTER "footer.html"
+    TEMPLATE "t.html"
+    DEBUG false
+    METADATA
+      "SPATIALSEARCH"    ""
+      "wms_abstract"    "Curvas, cartografía 1:250.000 IGM"
+      "wms_srs"    "epsg:32718"
+      "wfs_srs"    "epsg:32718"
+      "wms_queriable"    "1"
+      "wfs_queriable"    "1"
+      "wms_name"    "Curvas250_8"
+      "wfs_name"    "Curvas250_8"
+      "gml_include_items"    "all"
+      "wms_sld_body"    ""
+      "gml_geometries"    "geometry"
+      "gml_geometry_type"    "LINE"
+    END
+    PROJECTION
+      "init=epsg:32718" 
+    END
+    CLASS
+      NAME "0 - 500"
+      EXPRESSION ([ALTURA] >= -1 and [ALTURA] <= 500)
+      TEMPLATE "template.html"
+      #PEN
+      STYLE
+        SYMBOL "Curvas"
+        COLOR 254 245 145
+        SIZE 1
+      END
+    #STYLE
+    END
+    #CLASS
+    CLASS
+      NAME "501 - 1000"
+      EXPRESSION ([ALTURA] > 501 and [ALTURA] <= 1000)
+      TEMPLATE "template.html"
+      #PEN
+      STYLE
+        SYMBOL "Curvas"
+        COLOR 254 209 0
+        SIZE 1
+      END
+    #STYLE
+    END
+    #CLASS
+    CLASS
+      NAME "1001 - 2000"
+      EXPRESSION ([ALTURA] > 1001 and [ALTURA] <= 2000)
+      TEMPLATE "template.html"
+      #PEN
+      STYLE
+        SYMBOL "Curvas"
+        COLOR 254 155 0
+        SIZE 1
+      END
+    #STYLE
+    END
+    #CLASS
+    CLASS
+      NAME "2001 - 3000"
+      EXPRESSION ([ALTURA] > 2001 and [ALTURA] <= 3000)
+      TEMPLATE "template.html"
+      #PEN
+      STYLE
+        SYMBOL "Curvas"
+        COLOR 254 90 0
+        SIZE 1
+      END
+    #STYLE
+    END
+    #CLASS
+    CLASS
+      NAME "Mas de 3000m"
+      EXPRESSION ([ALTURA] >= 3000 and [ALTURA] <= 9001)
+      TEMPLATE "template.html"
+      #PEN
+      STYLE
+        SYMBOL "Curvas"
+        COLOR 130 0 0
+        SIZE 1
+      END
+    #STYLE
+    END
+  #CLASS
+  END
+  #LAYER
+  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #
+  LAYER
+    NAME "Hidrografia250_8"
+    #    TILEINDEX ''
+    #    TILEITEM  ''
+    STATUS on
+    DATA "carta_base/250000/hid2508"
+    TYPE line
+    CLASSITEM "LEVEL"
+    LABELCACHE on
+    #METADATA
+    TOLERANCE 3
+    TOLERANCEUNITS pixels
+    TRANSFORM true
+    #Hidrografia250_8
+    TRANSPARENCY 100
+    HEADER "header.html"
+    FOOTER "footer.html"
+    TEMPLATE "t.html"
+    DEBUG false
+    METADATA
+      "SPATIALSEARCH"    ""
+      "wms_abstract"    "Hidrografia, cartografía 1:250.000 IGM"
+      "wms_srs"    "epsg:32718"
+      "wfs_srs"    "epsg:32718"
+      "wms_queriable"    "1"
+      "wfs_queriable"    "1"
+      "wms_name"    "Hidrografia250_8"
+      "wfs_name"    "Hidrografia250_8"
+      "gml_include_items"    "all"
+      "wms_sld_body"    ""
+      "gml_geometries"    "geometry"
+      "gml_geometry_type"    "LINE"
+    END
+    PROJECTION
+      "init=epsg:32718" 
+    END
+    CLASS
+      NAME "Lago/Laguna"
+      EXPRESSION "2"
+      TEMPLATE "template.html"
+      #PEN
+      STYLE
+        SYMBOL "Hidrog1"
+        COLOR 0 209 220
+        SIZE 1
+      END
+    #STYLE
+    END
+    #CLASS
+    CLASS
+      NAME "Río"
+      EXPRESSION "5"
+      TEMPLATE "template.html"
+      #PEN
+      STYLE
+        SYMBOL "Hidrog1"
+        COLOR 23 0 220
+        SIZE 1
+      END
+    #STYLE
+    END
+    #CLASS
+    CLASS
+      NAME "Quebrada"
+      EXPRESSION "7"
+      TEMPLATE "template.html"
+      #PEN
+      STYLE
+        SYMBOL "Hidrog2"
+        COLOR 0 130 255
+        SIZE 1
+      END
+    #STYLE
+    END
+    #CLASS
+    CLASS
+      NAME "Canal"
+      EXPRESSION "32"
+      TEMPLATE "template.html"
+      #PEN
+      STYLE
+        SYMBOL "Hidrog1"
+        COLOR 165 165 165
+        SIZE 1
+      END
+    #STYLE
+    END
+  #CLASS
+  END
+  #LAYER
+  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #
+  LAYER
+    NAME "Caminos50_8"
+    #    TILEINDEX ''
+    #    TILEITEM  ''
+    STATUS off
+    DATA "carta_base/50000/cam508"
+    TYPE line
+    CLASSITEM "LEVEL"
+    LABELCACHE on
+    #METADATA
+    TOLERANCE 3
+    TOLERANCEUNITS pixels
+    TRANSFORM true
+    #Caminos50_8
+    TRANSPARENCY 100
+    HEADER "header.html"
+    FOOTER "footer.html"
+    TEMPLATE "t.html"
+    DEBUG false
+    METADATA
+      "SPATIALSEARCH"    ""
+      "wms_abstract"    "Caminos, cartografía 1:50.000 IGM"
+      "wms_srs"    "epsg:32718"
+      "wms_metadataurl_href"    "http://www.snit.gob.cl/catalogo/showMetadata.do?metadataId=9549&metadataStatus=2&private=false"
+      "wfs_srs"    "epsg:32718"
+      "wms_queriable"    "1"
+      "wfs_queriable"    "1"
+      "wms_name"    "Caminos50_8"
+      "wfs_name"    "Caminos50_8"
+      "gml_include_items"    "all"
+      "wms_sld_body"    ""
+      "gml_geometries"    "geometry"
+      "gml_geometry_type"    "LINE"
+    END
+    PROJECTION
+      "init=epsg:32718" 
+    END
+    CLASS
+      NAME "Camino principal"
+      EXPRESSION "1"
+      TEMPLATE "template.html"
+      #PEN
+      STYLE
+        SYMBOL "Caminos"
+        COLOR 220 0 0
+        SIZE 1
+      END
+    #STYLE
+    END
+    #CLASS
+    CLASS
+      NAME "Camino secundario"
+      EXPRESSION "2"
+      TEMPLATE "template.html"
+      #PEN
+      STYLE
+        SYMBOL "Caminos"
+        COLOR 120 120 120
+        SIZE 1
+      END
+    #STYLE
+    END
+    #CLASS
+    CLASS
+      NAME "Pista de aterrizaje"
+      EXPRESSION "5"
+      TEMPLATE "template.html"
+      #PEN
+      STYLE
+        SYMBOL "Caminos"
+        COLOR 0 209 220
+        SIZE 1
+      END
+    #STYLE
+    END
+    #CLASS
+    CLASS
+      NAME "Huella"
+      EXPRESSION "8"
+      TEMPLATE "template.html"
+      #PEN
+      STYLE
+        SYMBOL "Caminos"
+        COLOR 161 102 50
+        SIZE 1
+      END
+    #STYLE
+    END
+    #CLASS
+    CLASS
+      NAME "Vía ferrea"
+      EXPRESSION "30"
+      TEMPLATE "template.html"
+      #PEN
+      STYLE
+        SYMBOL "Caminos"
+        COLOR 0 0 0
+        SIZE 1
+      END
+    #STYLE
+    END
+  #CLASS
+  END
+  #LAYER
+  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #
+  LAYER
+    NAME "L_Comunal_8"
+    #    TILEINDEX ''
+    #    TILEITEM  ''
+    STATUS on
+    DATA "carta_base/50000/co8"
+    TYPE polygon
+    LABELCACHE on
+    #METADATA
+    TOLERANCE 3
+    TOLERANCEUNITS pixels
+    TRANSFORM true
+    #L_Comunal_8
+    TRANSPARENCY 100
+    HEADER "header.html"
+    FOOTER "footer.html"
+    TEMPLATE "t.html"
+    DEBUG false
+    METADATA
+      "SPATIALSEARCH"    ""
+      "wms_abstract"    "Limites Comunales, cartografía 1:50.000 IGM"
+      "wms_srs"    "epsg:32718"
+      "wms_metadataurl_href"    "http://www.snit.gob.cl/catalogo/showMetadata.do?metadataId=9555&metadataStatus=2&private=false"
+      "wfs_srs"    "epsg:32718"
+      "wms_queriable"    "1"
+      "wfs_queriable"    "1"
+      "wms_name"    "L_Comunal_8"
+      "wfs_name"    "L_Comunal_8"
+      "gml_include_items"    "all"
+      "wms_sld_body"    ""
+      "gml_geometries"    "geometry"
+      "gml_geometry_type"    "polygon"
+    END
+    PROJECTION
+      "init=epsg:32718" 
+    END
+    CLASS
+      NAME "L_Comunal_8"
+      TEMPLATE "template.html"
+      #RASTERFILL_STYLE_EMPTY
+      STYLE
+        COLOR -1 -1 -1
+        BACKGROUNDCOLOR 255 255 255
+      END
+      #STYLE
+      #OUTLINE SYMBOL
+      STYLE
+        SYMBOL "Limite"
+        OUTLINECOLOR 165 165 165
+        SIZE 1
+      END
+    END
+  #CLASS
+  END
+  #LAYER
+  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #
+  LAYER
+    NAME "Poblados50_8"
+    #    TILEINDEX ''
+    #    TILEITEM  ''
+    STATUS off
+    DATA "carta_base/50000/cp508"
+    TYPE point
+    LABELCACHE on
+    #METADATA
+    TOLERANCE 3
+    TOLERANCEUNITS pixels
+    TRANSFORM true
+    #Poblados50_8
+    TRANSPARENCY 100
+    HEADER "header.html"
+    FOOTER "footer.html"
+    TEMPLATE "t.html"
+    DEBUG false
+    METADATA
+      "SPATIALSEARCH"    ""
+      "wms_abstract"    "Centros Poblados, cartografía 1:50.000 IGM"
+      "wms_srs"    "epsg:32718"
+      "wfs_srs"    "epsg:32718"
+      "wms_queriable"    "1"
+      "wfs_queriable"    "1"
+      "wms_name"    "Poblados50_8"
+      "wfs_name"    "Poblados50_8"
+      "gml_include_items"    "all"
+      "wms_sld_body"    ""
+      "gml_geometries"    "geometry"
+      "gml_geometry_type"    "point"
+    END
+    PROJECTION
+      "init=epsg:32718" 
+    END
+    CLASS
+      NAME "Poblados50_8"
+      TEMPLATE "template.html"
+      STYLE
+        SYMBOL "square"
+        COLOR 255 173 0
+        SIZE 6
+      END
+    #STYLE
+    END
+  #CLASS
+  END
+  #LAYER
+  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #
+  LAYER
+    NAME "Ciudades50_8"
+    #    TILEINDEX ''
+    #    TILEITEM  ''
+    STATUS on
+    DATA "carta_base/50000/cu508"
+    TYPE polygon
+    LABELCACHE on
+    #METADATA
+    TOLERANCE 3
+    TOLERANCEUNITS pixels
+    TRANSFORM true
+    #Ciudades50_8
+    TRANSPARENCY 100
+    HEADER "header.html"
+    FOOTER "footer.html"
+    TEMPLATE "t.html"
+    DEBUG false
+    METADATA
+      "SPATIALSEARCH"    ""
+      "wms_abstract"    "Ciudades, cartografía 1:50.000 IGM"
+      "wms_srs"    "epsg:32718"
+      "wms_metadataurl_href"    "http://www.snit.gob.cl/catalogo/showMetadata.do?metadataId=9553&metadataStatus=2&private=false"
+      "wfs_srs"    "epsg:32718"
+      "wms_queriable"    "1"
+      "wfs_queriable"    "1"
+      "wms_name"    "Ciudades50_8"
+      "wfs_name"    "Ciudades50_8"
+      "gml_include_items"    "all"
+      "wms_sld_body"    ""
+      "gml_geometries"    "geometry"
+      "gml_geometry_type"    "polygon"
+    END
+    PROJECTION
+      "init=epsg:32718" 
+    END
+    CLASS
+      NAME "Ciudades50_8"
+      TEMPLATE "template.html"
+      #RASTERFILL_STYLE_SOLID
+      STYLE
+        COLOR 255 195 195
+        BACKGROUNDCOLOR 255 255 255
+      END
+      #STYLE
+      #OUTLINE SYMBOL
+      STYLE
+        SYMBOL "Limite"
+        OUTLINECOLOR 165 165 165
+        SIZE 1
+      END
+    END
+  #CLASS
+  END
+  #LAYER
+  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #
+  LAYER
+    NAME "Curvas50_8"
+    #    TILEINDEX ''
+    #    TILEITEM  ''
+    STATUS off
+    DATA "carta_base/50000/cur508"
+    TYPE line
+    LABELCACHE on
+    #METADATA
+    TOLERANCE 3
+    TOLERANCEUNITS pixels
+    TRANSFORM true
+    #Curvas50_8
+    TRANSPARENCY 100
+    HEADER "header.html"
+    FOOTER "footer.html"
+    TEMPLATE "t.html"
+    DEBUG false
+    METADATA
+      "SPATIALSEARCH"    ""
+      "wms_abstract"    "Curvas de Nivel, cartografía 1:50.000 IGM"
+      "wms_srs"    "epsg:32718"
+      "wms_metadataurl_href"    "http://www.snit.gob.cl/catalogo/showMetadata.do?metadataId=9561&metadataStatus=2&private=false"
+      "wfs_srs"    "epsg:32718"
+      "wms_queriable"    "1"
+      "wfs_queriable"    "1"
+      "wms_name"    "Curvas50_8"
+      "wfs_name"    "Curvas50_8"
+      "gml_include_items"    "all"
+      "wms_sld_body"    ""
+      "gml_geometries"    "geometry"
+      "gml_geometry_type"    "line"
+    END
+    PROJECTION
+      "init=epsg:32718" 
+    END
+    CLASS
+      NAME "0 - 500"
+      EXPRESSION ([ALTURA] >= -1 and [ALTURA] <= 500)
+      TEMPLATE "template.html"
+      #PEN
+      STYLE
+        SYMBOL "Curvas"
+        COLOR 254 245 145
+        SIZE 1
+      END
+    #STYLE
+    END
+    #CLASS
+    CLASS
+      NAME "501 - 1000"
+      EXPRESSION ([ALTURA] > 501 and [ALTURA] <= 1000)
+      TEMPLATE "template.html"
+      #PEN
+      STYLE
+        SYMBOL "Curvas"
+        COLOR 254 209 0
+        SIZE 1
+      END
+    #STYLE
+    END
+    #CLASS
+    CLASS
+      NAME "1001 - 2000"
+      EXPRESSION ([ALTURA] > 1001 and [ALTURA] <= 2000)
+      TEMPLATE "template.html"
+      #PEN
+      STYLE
+        SYMBOL "Curvas"
+        COLOR 254 155 0
+        SIZE 1
+      END
+    #STYLE
+    END
+    #CLASS
+    CLASS
+      NAME "2001 - 3000"
+      EXPRESSION ([ALTURA] > 2001 and [ALTURA] <= 3000)
+      TEMPLATE "template.html"
+      #PEN
+      STYLE
+        SYMBOL "Curvas"
+        COLOR 254 90 0
+        SIZE 1
+      END
+    #STYLE
+    END
+    #CLASS
+    CLASS
+      NAME "Mas de 3000m"
+      EXPRESSION ([ALTURA] >= 3000 and [ALTURA] <= 9001)
+      TEMPLATE "template.html"
+      #PEN
+      STYLE
+        SYMBOL "Curvas"
+        COLOR 130 0 0
+        SIZE 1
+      END
+    #STYLE
+    END
+  #CLASS
+  END
+  #LAYER
+  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #
+  LAYER
+    NAME "Hidrografia50_8"
+    #    TILEINDEX ''
+    #    TILEITEM  ''
+    STATUS off
+    DATA "carta_base/50000/hid508"
+    TYPE line
+    CLASSITEM "LEVEL"
+    LABELCACHE on
+    #METADATA
+    TOLERANCE 3
+    TOLERANCEUNITS pixels
+    TRANSFORM true
+    #Hidrografia50_8
+    TRANSPARENCY 100
+    HEADER "header.html"
+    FOOTER "footer.html"
+    TEMPLATE "t.html"
+    DEBUG false
+    METADATA
+      "SPATIALSEARCH"    ""
+      "wms_abstract"    "Hidrografia, cartografía 1:50.000 IGM"
+      "wms_srs"    "epsg:32718"
+      "wms_metadataurl_href"    "http://www.snit.gob.cl/catalogo/showMetadata.do?metadataId=9563&metadataStatus=2&private=false"
+      "wfs_srs"    "epsg:32718"
+      "wms_queriable"    "1"
+      "wfs_queriable"    "1"
+      "wms_name"    "Hidrografia50_8"
+      "wfs_name"    "Hidrografia50_8"
+      "gml_include_items"    "all"
+      "wms_sld_body"    ""
+      "gml_geometries"    "geometry"
+      "gml_geometry_type"    "line"
+    END
+    PROJECTION
+      "init=epsg:32718" 
+    END
+    CLASS
+      NAME "Lago/Laguna"
+      EXPRESSION "2"
+      TEMPLATE "template.html"
+      #PEN
+      STYLE
+        SYMBOL "Hidrog1"
+        COLOR 0 209 220
+        SIZE 1
+      END
+    #STYLE
+    END
+    #CLASS
+    CLASS
+      NAME "Río"
+      EXPRESSION "5"
+      TEMPLATE "template.html"
+      #PEN
+      STYLE
+        SYMBOL "Hidrog1"
+        COLOR 23 0 220
+        SIZE 1
+      END
+    #STYLE
+    END
+    #CLASS
+    CLASS
+      NAME "Quebrada"
+      EXPRESSION "7"
+      TEMPLATE "template.html"
+      #PEN
+      STYLE
+        SYMBOL "Hidrog2"
+        COLOR 0 130 255
+        SIZE 1
+      END
+    #STYLE
+    END
+    #CLASS
+    CLASS
+      NAME "Canal"
+      EXPRESSION "32"
+      TEMPLATE "template.html"
+      #PEN
+      STYLE
+        SYMBOL "Hidrog1"
+        COLOR 165 165 165
+        SIZE 1
+      END
+    #STYLE
+    END
+  #CLASS
+  END
+  #LAYER
+  ###################################################################
+###################################################################
+#####################################################
+ LAYER  #Controles_Fronterizos
+    TRANSPARENCY 100
+    NAME 'Controles_Fronterizos'
+    METADATA
+    END  #METADATA
+    TOLERANCE 3
+    TOLERANCEUNITS pixels
+    DATA 'controles/con8'
+    HEADER 'header.html'
+    FOOTER 'footer.html'
+    LABELCACHE on
+#    TILEINDEX ''
+#    TILEITEM  ''
+    STATUS off
+    DEBUG false
+    TRANSFORM true
+    TYPE point
+    CLASSITEM 'TIPO_CONTR'
+    CLASS
+      NAME 'AEREO'
+      TEMPLATE 'template.html'
+      EXPRESSION 'AEREO'
+      #BASICMARKER_STYLE_PATTERN
+      STYLE
+        SYMBOL 'circle'
+        SIZE 8
+        COLOR 255 0 0
+        BACKGROUNDCOLOR -1 -1 -1
+      END  #STYLE
+    END #CLASS
+    CLASS
+      NAME 'MARITIMO'
+      TEMPLATE 'template.html'
+      EXPRESSION 'MARITIMO'
+      #BASICMARKER_STYLE_PATTERN
+      STYLE
+        SYMBOL 'square'
+        SIZE 8
+        COLOR 0 0 255
+        BACKGROUNDCOLOR -1 -1 -1
+      END  #STYLE
+    END #CLASS
+    CLASS
+      NAME 'TERRESTRE'
+      TEMPLATE 'template.html'
+      EXPRESSION 'TERRESTRE'
+      #BASICMARKER_STYLE_PATTERN
+      STYLE
+        SYMBOL 'triangle'
+        SIZE 8
+        COLOR 161 102 50
+        BACKGROUNDCOLOR -1 -1 -1
+      END  #STYLE
+    END #CLASS
+  END  #LAYER
+#####################################################################################################################################################
+##########################################################
+  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #
+  LAYER
+    NAME "L_Regional_8"
+    #    TILEINDEX ''
+    #    TILEITEM  ''
+    STATUS on
+    DATA "carta_base/50000/reg8"
+    TYPE polygon
+    LABELCACHE on
+    #METADATA
+    TOLERANCE 3
+    TOLERANCEUNITS pixels
+    TRANSFORM true
+    #L_Regional_8
+    TRANSPARENCY 100
+    HEADER "header.html"
+    FOOTER "footer.html"
+    TEMPLATE "t.html"
+    DEBUG false
+    METADATA
+      "SPATIALSEARCH"    ""
+      "wms_abstract"    "Limite Regional, cartografía 1:50.000 IGM"
+      "wms_srs"    "epsg:32718"
+      "wfs_srs"    "epsg:32718"
+      "wms_queriable"    "1"
+      "wfs_queriable"    "1"
+      "wms_name"    "L_Regional_8"
+      "wfs_name"    "L_Regional_8"
+      "gml_include_items"    "all"
+      "wms_sld_body"    ""
+      "gml_geometries"    "geometry"
+      "gml_geometry_type"    "polygon"
+    END
+    PROJECTION
+      "init=epsg:32718" 
+    END
+    CLASS
+      NAME "L_Regional_8"
+      TEMPLATE "template.html"
+      #RASTERFILL_STYLE_EMPTY
+      STYLE
+        COLOR -1 -1 -1
+        BACKGROUNDCOLOR 255 255 255
+      END
+      #STYLE
+      #OUTLINE SYMBOL
+      STYLE
+        SYMBOL "Limite"
+        OUTLINECOLOR 220 0 0
+        SIZE 1
+      END
+    END
+  #CLASS
+  END
+#OUTPUTFORMAT
+#################################################
+#################################################
+END

@@ -1,0 +1,139 @@
+MAP  
+  #
+  # Start of map file
+  #
+  # Sample map file for a chameleon app.
+  #
+  NAME "REGION_DEL_BIOBIO"
+  STATUS ON
+  UNITS METERS
+  EXTENT 552477.899994 5730978.200007 922535.939977 6021219.799993 
+  SIZE 768 500 
+  SHAPEPATH "./data"
+  SYMBOLSET "./etc/publico.sym"
+  FONTSET "./etc/fonts.txt"
+  IMAGECOLOR 255 255 255
+  UNITS METERS
+  #
+  # Start of web interface definition
+  #
+  WEB
+    #MINSCALE 5500000
+    MAXSCALE 4500000
+    #
+    # On Windows systems, /tmp and /tmp/ms_tmp/ should be created at the root 
+    # of the drive where the .MAP file resides.
+    #
+    IMAGEPATH "/tmp/ms_tmp/"
+    IMAGEURL "/ms_tmp/"
+  END
+  #
+  # Start of reference map
+  #
+  REFERENCE
+    STATUS ON
+    IMAGE "./images/cuadro_ubicacion.jpg"
+    SIZE 120 82 
+    EXTENT -5700.02715 5721887.729775 430056.716245 6018074.464893
+    COLOR -1 -1 -1
+    OUTLINECOLOR 255 0 0
+  END
+  QUERYMAP
+    COLOR 255 0 0
+    STYLE HILITE
+  END
+  PROJECTION
+    "init=epsg:32718" 
+  END
+  #
+  # Start of legend
+  #
+  LEGEND
+    STATUS ON
+    KEYSIZE 18 12 
+    LABEL
+      TYPE BITMAP
+      SIZE MEDIUM
+      COLOR 0 0 89
+    END
+  END
+  #
+  # Start of scalebar
+  #
+  SCALEBAR
+    STATUS ON
+    COLOR 255 255 255
+    OUTLINECOLOR 0 0 0
+    BACKGROUNDCOLOR 0 0 0
+    IMAGECOLOR 255 255 255
+    UNITS kilometers
+    INTERVALS 5
+    SIZE 150 5 
+    LABEL
+      SIZE SMALL
+      COLOR 0 0 0
+    END
+  END
+  #LAYER
+  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #
+  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #
+  # Start of layer definitions
+  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #  #
+  LAYER
+    NAME "Sudamerica"
+    STATUS on
+    DATA "sudamerica"
+    TYPE polygon
+    CLASSITEM "TERRITORIO"
+    UNITS DD
+    SIZEUNITS PIXELS
+    TOLERANCE 3
+    TOLERANCEUNITS pixels
+    TRANSFORM true
+    #Sudamerica
+    TRANSPARENCY 100
+    METADATA
+    END
+    #METADATA
+    PROJECTION
+      "init=epsg:4326" 
+    END
+    CLASS
+      NAME "Chile"
+      EXPRESSION "Chile"
+      #RASTERFILL_STYLE_SOLID
+      STYLE
+        COLOR 255 251 195
+        BACKGROUNDCOLOR 255 255 255
+      END
+    #STYLE
+    END
+    #CLASS
+    CLASS
+      NAME "Mar"
+      EXPRESSION "Mar"
+      #RASTERFILL_STYLE_SOLID
+      STYLE
+        COLOR 195 252 255
+        BACKGROUNDCOLOR 255 255 255
+      END
+    #STYLE
+    END
+    #CLASS
+    CLASS
+      NAME "Sudmerica"
+      EXPRESSION "Sudmerica"
+      #RASTERFILL_STYLE_SOLID
+      STYLE
+        COLOR 243 226 211
+        BACKGROUNDCOLOR 255 255 255
+      END
+    #STYLE
+    END
+  #CLASS
+  END
+  #LAYER
+  #############################################
+################################################################
+  #####################################################
+END
